@@ -1,0 +1,591 @@
+# Mini Project: Task Management Application Project
+
+## Project Requirements:
+
+### User Interface Design:
+**Create wireframes and prototypes using Figma or similar tools to outline the layout and flow of the application.
+Design visually appealing and intuitive UI/UX using Bootstrap components like Navbar, Cards, and Forms.**
+
+### Task Management Features:
+### Home Page:
+**Implement a landing page with a Navbar, Jumbotron for a welcome message, and Cards to display key features.**
+### Task Dashboard Page:
+**Utilize Cards, Forms, and Buttons to create an interactive dashboard for managing tasks. Card should have basic information per task like Name, brief description, due date, etc.** 
+### Task Details Page:
+**Design a detailed view for individual tasks using Cards similar to the Task Dashboard Page but with more detailed information about each task.**
+### Task Creation Page:
+**Develop a form layout using Bootstrap Forms and Input Groups for adding new tasks.**
+### Register Page:
+**Create a registration form with Bootstrap Form components for new users to sign up.
+Apply Bootstrap Form validation to ensure the correctness of user-provided information.**
+### Login Page:
+**Develop a form layout using Bootstrap Forms with input fields for username and password.
+Apply Bootstrap Form validation to ensure the correctness of user credentials.**
+### Bootstrap Integration:
+**Utilize Bootstrap's grid system for layout design and component styling across all HTML pages.
+Apply Bootstrap typography, color palette, and utilities for consistent styling.**
+### Responsive Design:
+**Ensure the application layout is responsive and accessible across various devices using Bootstrap's responsive grid and utilities.
+Test responsiveness using Bootstrap's built-in breakpoint classes and media queries.**
+### User Experience Enhancements:
+**Enhance user experience through intuitive navigation using Bootstrap Navbar and Dropdown menus.**
+### Carousel Component (Bonus):
+**Implement a Bootstrap Carousel component to showcase featured tasks or announcements on the home page.
+Utilize Bootstrap's carousel indicators, controls, and responsive behavior for seamless navigation.**
+### Accordion Component (Bonus):
+**Integrate a Bootstrap Accordion component for organizing task categories or FAQ sections on relevant pages.
+Utilize Bootstrap's accordion groups, headings, and collapsible panels for a clean and space-efficient layout.**
+### Badge Component (Bonus):
+**Implement Bootstrap Badge components to display task statuses, priorities, or tags for enhanced categorization and organization.
+Utilize Bootstrap's badge styling and contextual variations to convey task attributes effectively.**
+### GitHub Repository:
+**Create a GitHub repository for the project and commit code regularly.
+Maintain a clean and interactive README.md file in the GitHub repository, providing clear instructions on how to run the application and explanations of its features.
+Include a link to the GitHub repository in the project documentation.**
+
+### Start by creating a new html file
+##### Name it index.html
+##### Enter command bs5-$
+##### you should see the following output
+```
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main></main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+```
+##### from here you can visit https://getbootstrap.com/docs/5.0/getting-started/introduction/ and grab resources such as, container, navbar, form and many others.
+
+##### Here's an example of a navbar:
+```
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+```
+
+##### Here's an example of a container:
+```
+<div class="container">
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
+```
+
+##### Here's an example of a form:
+```
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+```
+#### From here we add content for example here is our home page 
+
+### Home Page: 
+```
+<!doctype html>
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Components</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+
+    <body>
+        <header>
+            <!-- Navbar --> 
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                  <a class="navbar-brand text-primary" href="#" src="logo.png"><img class="logo" src="bear_logo.png" alt="logo" width="250" height="250">Dreamy Task</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="signup.html" target="_blank">Register</a>
+                      </li>
+                      <!-- Ask about activating dropdown? -->
+                      <li class="nav-item dropdown">
+                        <a class="nav-link btn btn-primary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                          Dropdown
+                        </a>
+                        <!-- Added dropdown-item-text shows items-->
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dashboard page" href="dashboard.html" target="_blank">Task Dashboard</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="work page" href="work.html" target="_blank">Manage Work</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="School page" href="school.html" target="_blank">Manage School</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="docs page" href="docs.html" target="_blank">Manage Documents</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="Asgmt page" href="asgmt.html" target="_blank">Manage School</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="signin.html" tabindex="-1" aria-disabled="true">Sign In</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <main>
+          <!-- jumbotron -->
+          <div class="jumbotron jumbotron-fluid bg-dark text-light text-center">
+            <div class="container">
+              <h1 class="display-4">Welcome to Dreamy Task!</h1>
+              <p class="lead">Are you ready to get so organized that you can prioritize sleep? </p>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="card-group">
+            <div class="card">
+              <img src="work.jpg" class="image" alt="work image">
+              <div class="card-body">
+                <h5 class="card-title">Manage Work</h5>
+                <p class="card-text">Manage work with ease, connecting with peers and prioritize tasks to maximize work flow. </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="work.html" target="_blank" class="btn btn-primary">Learn About work management</a>
+                <!-- Ask about giving buttons active reactions -->
+                <!-- Button Active hover-->
+                <style>
+                  .btn-primary:hover {
+                     /* background-color: #964707;
+                      border-color: #004085; */
+                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                      transform: scale(1.1);
+                      transition: all 0.2s;
+                  }
+                  </style>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">connect with peers</li>
+                  <li class="list-group-item">manage work task</li>
+                  <li class="list-group-item">mark tasks as priority</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <img src="school.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Manage School</h5>
+                <p class="card-text">Stay on top of your class work creating calenders for punctuality. And creating study guides focused on your subjects.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="school.html" class="btn btn-primary" target="_blank">Learn About school management</a>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Organize Homework</li>
+                  <li class="list-group-item">Create Calenders</li>
+                  <li class="list-group-item">Create Study guides</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <img src="docs.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Manage Docs</h5>
+                <p class="card-text">Organize documents and files. Mark when each of your file/documents are completed and store them accordingly.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <a href="docs.html" class="btn btn-primary" target="_blank">Learn About Managing Docs</a>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">File organization</li>
+                  <li class="list-group-item">File styling</li>
+                  <li class="list-group-item">Prioritizing Files</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+                <img src="asgmnt.jpg" class="card-img-top" alt="assignment image">
+                <div class="card-body">
+                  <h5 class="card-title">Manage Asgmt</h5>
+                  <p class="card-text">Manage all assignments and tasks. Prioritize assignments with due dates and mark them off when completed to earn in app rewards.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <a href="asgmt.html" class="btn btn-primary" target="_blank">Learn About managing assignments</a>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Prioritize Assignments</li>
+                    <li class="list-group-item">Earn Prestige for completing tasks</li>
+                    <li class="list-group-item">Share your Work</li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+            <!-- Main Content -->
+            <div class=".container-fluid m-1" >
+                <div class="row bg-success">
+                  <div style="background-image: url(https://i.pinimg.com/564x/aa/46/99/aa4699a7c4e007a4f95e557f645a2b6e.jpg);" class="sidebar col-sm-2 bg-primary p-3 ">
+                    <h5 class="text-center text-decoration-underline text-light">Left Sidebar</h5>
+                    <div class="d-flex flex-column bd-highlight mb-3">
+                    <!-- toast button!-->
+                    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                           <div class="toast-header">
+                                <img src="bear_logo.png" width="150" height="150" class="rounded me-2" alt="bear logo">
+                                    <strong class="me-auto">Greetings</strong>
+                                    <small>11 mins ago</small>
+                                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                             </div>
+                            <div class="toast-body">
+                                    Hello, world! Welcome to Dreamy Task. The #1 task management app.
+                           </div>
+                      </div>
+                      <!-- Toast activator-->
+                      <script>
+                        const toastTrigger = document.getElementById('liveToastBtn')
+                        const toastLiveExample = document.getElementById('liveToast')
+                        if (toastTrigger) {toastTrigger.addEventListener('click', () => 
+                        {const toast = new bootstrap.Toast(toastLiveExample)
+                          toast.show()})
+                        }
+                      </script>
+                    </div>
+                        <div class="p-2 bd-highlight text-light text-center">About Us</div>
+                        <div class="p-2 bd-highlight text-light text-center">More Info </div>
+                        <div class="p-2 bd-highlight text-light text-center">Contact</div>
+                      </div>
+                      <div class="d-flex bd-highlight">
+                        <div class="p-2 bd-highlight"></div>
+                        <div class="p-2 bd-highlight"></div>
+                        <div class="p-2 bd-highlight"></div>
+                      </div>
+                  </div>
+                  <!-- logo -->
+                  <div class="bg_gradient main-content col-sm-8 bg-danger p-3">
+                    <h4 class="text-center text-decoration-underline text-light"><a class="text_logo" href="index.html" target="_blank" ><img class="snoring rounded float-left" src="bear_logo2.png" class="img-fluid" alt="bear_logo" width="350px" height="250px"></a>
+                      <br><br></h4>
+                    <div>
+                        <ul>
+                            <h5 class="text-light">Dreamy Task?</h5>
+                            <p class="text-light">Dreamy Task is an application that help you stay organized and top of all your To-do's in your day to day. So you can focus on getting more sleep! </p>
+                            <!-- Carousel -->
+                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 4"></button>
+                              </div>
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <img src="carousel_imgs/work.png" class="d-block w-100" alt="Work Management Image">
+                                  <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Work Management</h5>
+                                    <p>Manage work with ese using Dreamy Task, connect with peers and knock out tasks like never before.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="carousel_imgs/school.png" class="d-block w-100" alt="School Management Image">
+                                  <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>School Management</h5>
+                                    <p>Manage school assignments with our easy to use app allowing you to create calenders and study guides catered to your subject.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="carousel_imgs/docs.png" class="d-block w-100" alt="Document Management Image">
+                                  <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Document Management</h5>
+                                    <p>Manage Documents process of arranging, categorizing, and storing files in a way that promotes efficient management and retrieval.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="carousel_imgs/asgmt.png" class="d-block w-100" alt="Assignments Management Image">
+                                  <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Assignment Management</h5>
+                                    <p>Create to-do's and prioritize assignments by due dates. Allow peers to access your work or live share. Earn in app rewards by completing tasks.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-prev-next" aria-hidden="true"></span>
+                                <span class="visually-hidden">next</span>
+                            </div>
+                           
+                        </ul>
+                    </div>
+                  </div>
+                  <!-- Advertizement right sidebar-->
+                  <div style="background-image: url(https://i.pinimg.com/564x/aa/46/99/aa4699a7c4e007a4f95e557f645a2b6e.jpg);" class="sidebar col-sm-2 bg-info p-3">
+                    <h5 class="text-center text-decoration-underline text-light">Trusted by 225,000+ customers worldwide</h5>
+                    <div class="p-2 bd-highlight text-light text-center"><img src="canva.png" width="150" height="150" class="rounded me-2" alt="canva logo"></div>
+                    <div class="p-2 bd-highlight text-light text-center"><img src="coke.jpg" width="150" height="150" class="rounded me-2" alt="canva logo"></div>
+                    <div class="p-2 bd-highlight text-light text-center"><img src="jc.png" width="150" height="150" class="rounded me-2" alt="canva logo"></div>
+                    <div class="p-2 bd-highlight text-light text-center"><img src="nike.png" width="150" height="150" class="rounded me-2" alt="canva logo"></div>
+                    <div class="p-2 bd-highlight text-light text-center"><img src="cat.png" width="150" height="150" class="rounded me-2" alt="canva logo"></div>
+                  </div>
+                </div>
+            </div>
+            <!-- accordion -->
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Work Management 
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">More Info<ul>
+                    <li>Create To-Do's</li>
+                    <li>Prioritize tasks</li>
+                    <li>Connect with peers</li>
+                    <li>Earn rewards</li>
+                    <li>Live share</li>
+                  </ul></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    School Management
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">More Info<ul>
+                    <li>Create calenders</li>
+                    <li>Create study guides</li>
+                    <li>Create To-Do's</li>
+                    <li>Prioritize tasks</li>
+                    <li>Connect with peers</li>
+                    <li>Earn in app school rewards</li>
+                    <li>Live Share</li>
+                  </ul></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Document Management
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">More Info<ul>
+                    <li>Create new files </li>
+                    <li>Remove old files</li>
+                    <li>Upload files</li>
+                    <li>Share files</li>
+                    <li>Earn in app file rewards</li>
+                  </ul></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    Assignment Management
+                  </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">More Info<ul>
+                    <li>Create To-Do's</li>
+                    <li>Prioritize Tasks</li>
+                    <li>Connect with Peers</li>
+                    <li>Earn Rewards</li>
+                    <li>Live Share</li>
+                    <li>Share your work</li>
+                    <li>Earn in app assignment rewards</li>
+                  </ul></div>
+                </div>
+              </div>
+            </div>
+              <br>
+              <!-- New Section -->
+              <section class="bear2 m-4">
+                <!-- Bear logo animated -->
+              <div class="container-fluid bg-dark text-light" style="background-image: url(https://i.pinimg.com/564x/aa/46/99/aa4699a7c4e007a4f95e557f645a2b6e.jpg);">
+                <div class="row">
+                  <div class="col">
+                    <img class="snoring rounded float-left" src="bear_logo2.png" class="img-fluid" alt="bear_logo" width="350px" height="250px">
+                    <h1 class="text-center">Work cozy with the #1 task management platform!</h1><br>
+                    <h3 class="text-center">What would you like to manage?</h3>
+                  </div>
+                </div>
+              </div>
+                    <!-- checkbox-->
+                     <!-- ask about inline row-->
+                      <div class="col bg-dark text-light d-flex justify-content-center" style="background-image: url(https://i.pinimg.com/564x/aa/46/99/aa4699a7c4e007a4f95e557f645a2b6e.jpg);">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            Task Management
+                          </label>
+                          <div class="">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Project Management
+                            </label>
+                          </label>
+                          <div class="">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Tasks and To-do's
+                            </label>
+                          </div>
+                          <div>
+                            <input class="btn btn-primary" type="submit" value="Submit">
+                          </div>
+                    </div>
+                </div>
+              </section>
+              </div>
+                <!-- jumbotron -->
+          <div class="jumbotron2 jumbotron-fluid bg-dark text-light text-center">
+            <div class="container">
+              <h1 class="display-4">Let's work together! Register Now! 😴</h1>
+              <p class="lead">Let’s Work together to stay organized, so we can get some more sleep!</p>
+            </div>
+          </div>
+        </main>
+        <section>
+            <form>
+              <!-- Forms -->
+                <div class="mb-3 p-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3 p-3">
+                  <label for="exampleInputPassword1" class="form-label">Phone</label>
+                  <input type="phone" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="m-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary m-3">Submit</button>
+              </form>
+              <div class="progress m-3">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+        </section>
+        <footer>
+            <!-- place footer here -->
+            <p>&copy; 2024 Zabdiel Perez. All rights reserved.</p>
+        </footer>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            
+    </body>
+</html>
+```
+**Home page includes all the elements we referenced such as navbar, with links to our home page, dashboard page with creation page included, register page, and login page our home page also includes our components such as carousel, accordion, and badges.**
