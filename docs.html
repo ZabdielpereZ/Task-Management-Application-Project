@@ -51,7 +51,7 @@
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="docs page" href="docs.html" target="_blank">Manage Documents</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="Asgmt page" href="asgmt.html" target="_blank">Manage School</a></li>
+                        <li><a class="Asgmt page" href="asgmt.html" target="_blank">Manage Assignments</a></li>
                       </ul>
                     </li>
                     <li class="nav-item">
@@ -97,21 +97,25 @@
                 transition: all 0.2s;
             }
             </style>
-            <!-- new container -->
-          <div class="container-center bg-dark text-light">
+            <!-- new container 🤡 -->
+          <div class="container-fluid text-light">
             <div class="row">
                 <!-- inline with d-flex ADD SPACE! -->
-              <div class="d-flex col-sm-12 bg-danger p-3">Tasks
+                 <!-- <div class="col">Tasks</div> -->
+              <div class="d-flex col-sm-10 bg-danger flex-wrap  align-items-baseline justify-content-evenly align-content-center">
                 <!-- New Task Buttons -->
-                <p class="bg-danger"><input class="btn btn-primary " type="submit" value="+ NEW"></p>
-                <p class="bg-danger"><input class="btn btn-primary " type="submit" value="Active Tasks"></p>
-                <p class="bg-danger"><input class="btn btn-primary " type="submit" value="Pending"></p>
-                <p class="bg-danger"><input class="btn btn-primary " type="submit" value="Reviewed"></p>
-                <p class="bg-danger"><input class="btn btn-primary " type="submit" value="Completed"></p>
-                <p class="bg-danger"><input class="btn btn-primary " type="submit" value="Archived"></p>
-                <p class="bg-danger"><input class="btn btn-primary " type="submit" value="Due"></p>
+                 <!-- command D selects similar items -->
+                  <!-- hold down option to create multiple cursors -->
+                 <p>Tasks</p>
+                <p class="bg-danger"><input class="btn btn-primary w-auto" type="submit" value="+ NEW"></p>
+                <p class="bg-danger"><input class="btn btn-primary w-auto" type="submit" value="Active Tasks"></p>
+                <p class="bg-danger"><input class="btn btn-primary w-auto" type="submit" value="Pending"></p>
+                <p class="bg-danger"><input class="btn btn-primary w-auto" type="submit" value="Reviewed"></p>
+                <p class="bg-danger"><input class="btn btn-primary w-auto" type="submit" value="Completed"></p>
+                <p class="bg-danger"><input class="btn btn-primary w-auto" type="submit" value="Archived"></p>
+                <p class="bg-danger"><input class="btn btn-primary w-auto" type="submit" value="Due"></p>
               </div>
-              <div class="col-sm-4 bg-dark">
+              <div class="col-sm-2 bg-dark">
                 <ul>
                     <div>
                         <span class="badge rounded-pill bg-primary">Active</span>
@@ -147,6 +151,7 @@
               </div>
             </div>
           </div>
+          <div>
         </main>
         <footer>
             <!-- place footer here -->
